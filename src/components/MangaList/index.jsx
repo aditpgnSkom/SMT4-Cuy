@@ -8,7 +8,7 @@ export default function MangaListComponents({ data }) {
       {data.data?.map((item) => {
         return (
           <Link
-            href={`/${item.mal_id}`}
+            href={`/manga/${item.mal_id}`}
             className="cursor-pointer text-color-primary hover:text-color-accent transition-all"
             key={item.mal_id}
           >
