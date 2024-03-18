@@ -9,14 +9,12 @@ export default function InputSearch() {
   const router = useRouter();
 
   const handleSearch = (event) => {
+    const keyword = searchRef.current.value;
+    if (!keyword) return;
+
     if (event.key === "Enter" || event.type === "click") {
       event.preventDefault();
-      const keyword = searchRef.current.value;
-      if (keyword != "") {
-        router.push(`/search/${keyword}`);
-      } else {
-        alert("Keyword tidak boleh kosong");
-      }
+      router.push(`/search/${keyword}`);
     }
   };
 
