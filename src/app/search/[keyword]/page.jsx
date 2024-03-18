@@ -1,7 +1,7 @@
 import Link from "next/link";
 import MangaListComponents from "@/components/MangaList";
 import Header from "@/components/MangaList/Header";
-import { getMangaResponse } from "@/app/libs/api-libs";
+import { getMangaResponse } from "@/libs/api-libs";
 
 export default async function page({ params }) {
   const { keyword } = params;

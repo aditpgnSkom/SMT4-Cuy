@@ -5,7 +5,7 @@ import MangaListComponents from "@/components/MangaList";
 import HeaderMenu from "@/components/Util/HeaderMenu";
 import Pagination from "@/components/Util/Pagination";
 import { useEffect, useState } from "react";
-import { getMangaResponse } from "../libs/api-libs";
+import { getMangaResponse } from "@/libs/api-libs";
 
 const Page = async () => {
   const [page, setPage] = useState(1);

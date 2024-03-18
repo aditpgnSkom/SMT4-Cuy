@@ -1,5 +1,5 @@
 import React from "react";
-import { getMangaResponse } from "@/app/libs/api-libs";
+import { getMangaResponse } from "@/libs/api-libs";
 import Image from "next/image";
 import VideoPlayer from "@/components/Util/VideoPlayer";
 
