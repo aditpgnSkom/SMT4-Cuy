@@ -1,6 +1,7 @@
 import React from "react";
 import { getMangaResponse } from "@/app/libs/api-libs";
 import Image from "next/image";
+import VideoPlayer from "@/components/Util/VideoPlayer";
 
 const page = async ({ params: { id } }) => {
   const manga = await getMangaResponse(`manga/${id}`);
@@ -40,6 +41,9 @@ const page = async ({ params: { id } }) => {
           className="w-full rounded object-cover"
         />
         <p className="text-justify text-xl">{manga.data.synopsis}</p>
+      </div>
+      <div>
+        <VideoPlayer text={manga.data.published.string} />
       </div>
     </>
   );
