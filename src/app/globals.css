@@ -2,32 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+img {
+  transition: 0.3s ease all;
+  --webkit-transition: 0.3s ease all;
+  --moz-transition: 0.3s ease all;
+  --ms-transition: 0.3s ease all;
+  --o-transition: 0.3s ease all;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+img:hover {
+  scale: 102%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.spinner {
+  display: flex;
+  align-items: center;
+  width: 84px;
+  height: 56px;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  border: 6.7px solid #636b94;
+  border-radius: 50%;
+  display: block;
+}
+
+.spinner::before {
+  width: 28px;
+  height: 28px;
+  animation: spinner-lsyq73 0.75s infinite linear reverse;
+  border-left-color: transparent;
+}
+
+.spinner::after {
+  width: 56px;
+  height: 56px;
+  animation: spinner-lsyq73 1.5s infinite linear;
+  border-right-color: transparent;
+}
+
+@keyframes spinner-lsyq73 {
+  to {
+    transform: rotate(360deg);
   }
 }
