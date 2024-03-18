@@ -4,8 +4,8 @@ import React from "react";
 
 export default function MangaListComponents({ data }) {
   return (
-    <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 px-4">
-      {data.data.map((item) => {
+    <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-4 px-4">
+      {data.data?.map((item) => {
         return (
           <Link
             href={`/${item.mal_id}`}
