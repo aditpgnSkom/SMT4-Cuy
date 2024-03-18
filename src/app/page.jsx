@@ -4,7 +4,7 @@ import Header from "@/components/MangaList/Header";
 
 export default async function Home() {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/top/manga?limit=8`
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/top/manga?limit=10`
   );
   const topManga = await response.json();
 
