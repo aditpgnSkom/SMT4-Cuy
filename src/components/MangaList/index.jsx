@@ -14,7 +14,7 @@ export default function MangaListComponents({ data }) {
           >
             <Image
               src={item.images.webp.image_url}
-              alt=""
+              alt={item.images.jpg.image_url}
               width={350}
               height={350}
               className="w-full max-h-64 object-cover"

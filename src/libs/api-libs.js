@@ -5,3 +5,8 @@ export const getMangaResponse = async (resource, query) => {
   const manga = await response.json();
   return manga;
 };
+
+export const getNestedMangaResponse = async (resource, objectProperty) => {
+  const response = await getMangaResponse(resource);
+  return response.data.flatMap((item) => item.entry);
+};
