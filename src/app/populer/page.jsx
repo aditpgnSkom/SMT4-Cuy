@@ -5,17 +5,15 @@ import MangaListComponents from "@/components/MangaList";
 import HeaderMenu from "@/components/Util/HeaderMenu";
 import Pagination from "@/components/Util/Pagination";
 import { useEffect, useState } from "react";
+import { getMangaResponse } from "../libs/api-libs";
 
 const Page = async () => {
   const [page, setPage] = useState(1);
   const [manga, setManga] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/top/manga?page=${page}`
-    );
-    const data = await response.json();
-    setManga(data);
+    const topManga = await getMangaResponse("top/manga", `page=${page}`);
+    setManga(topManga);
   };
 
   useEffect(() => {
