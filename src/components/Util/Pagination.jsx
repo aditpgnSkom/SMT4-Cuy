@@ -6,10 +6,12 @@ const Pagination = ({ page, lastPage, setPage }) => {
   };
 
   const handleNextPage = () => {
+    if (page === lastPage) return;
     setPage((prevState) => prevState + 1);
     scrollTop();
   };
   const handlePrevPage = () => {
+    if (page === 1) return;
     setPage((prevState) => prevState - 1);
     scrollTop();
   };
