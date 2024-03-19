@@ -25,7 +25,7 @@ export default async function Home() {
         <MangaListComponents data={topManga} />
       </section>
       {/* Manga Rekomendasi */}
-      <section>
+      <section className="mt-4 ">
         <Header title="Rekomendasi Manga" />
         <MangaListComponents data={rekomManga} />
       </section>
