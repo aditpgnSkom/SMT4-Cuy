@@ -7,11 +7,22 @@ const UserActionBtn = async () => {
   const actionURL = user ? "/api/auth/signout" : "/api/auth/signin";
 
   return (
-    <>
-      <Link href={actionURL} className="text-color-primary">
+    <div className="flex gap-2 justify-between">
+      {user ? (
+        <Link
+          href="/users/dashboard"
+          className="text-color-primary py-1 hover:text-color-secondary"
+        >
+          Dashboard
+        </Link>
+      ) : null}
+      <Link
+        href={actionURL}
+        className="bg-color-dark text-color-accent py-1 px-6 inline-block rounded hover:bg-color-primary hover:text-color-dark transition-all"
+      >
         {actionLabel}
       </Link>
-    </>
+    </div>
   );
 };
 
