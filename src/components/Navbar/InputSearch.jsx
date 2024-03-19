@@ -10,7 +10,7 @@ export default function InputSearch() {
 
   const handleSearch = (event) => {
     const keyword = searchRef.current.value;
-    if (!keyword) return;
+    if (!keyword || keyword.trim().length === 0) return;
 
     if (event.key === "Enter" || event.type === "click") {
       event.preventDefault();
