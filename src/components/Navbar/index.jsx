@@ -1,5 +1,6 @@
 import Link from "next/link";
 import InputSearch from "./InputSearch";
+import UserActionBtn from "./UserActionBtn";
 
 export default function index() {
   return (
@@ -10,6 +11,7 @@ export default function index() {
             MYMANGALIST
           </Link>
           <InputSearch />
+          <UserActionBtn />
         </div>
       </header>
     </>
